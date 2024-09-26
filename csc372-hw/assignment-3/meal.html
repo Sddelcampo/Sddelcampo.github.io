@@ -1,16 +1,62 @@
 <!DOCTYPE html>
+
+<!--
+  Name: Sebastian Del Campo
+  Date: 09.25.2024
+
+  This is the meal.html page for homework 3, which contains button for all food reccomendation
+  when pressed the food will be displayed on the right side and the total will be calculated.
+  There is also an option to removed the food which will also update the total.
+-->
+
 <html lang="en">
 <head>
+    <!-- Metadata and implementation of styles and script -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xyphernet | Meal Planner</title>
+    <title>Dine on Campo | Meal Planner</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
-
+        <h1>Create Your Meal Plan!</h1>
     </header>
+    <!-- Navigation -->
+    <div id="container">
+        <aside>
+            <h2>Navigation</h2>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="meal.html" class="nav-button">Meal Plan</a>
+            <br>
+            <h2>Meal Options</h2>
+
+            <!-- Buttons options -->
+            <button class="meal-button" data-index="1">Red Spicy Ramen ($13.99)</button>
+            <button class="meal-button" data-index="2">Yaki-Gyoza ($5.00)</button>
+            <button class="meal-button" data-index="3">Lo Mein ($11.99)</button>
+            <button class="meal-button" data-index="4">Chicken Stromboli ($14.99)</button>
+            <button class="meal-button" data-index="5">Turkey and Cheese Sandwhich ($6.99)</button>
+            <button class="meal-button" data-index="6">Gyro on Pita ($11.99)</button>
+            <button class="meal-button" data-index="7">Italian Night Club ($8.75)</button>
+            <button class="meal-button" data-index="8">Pesto Bowtie Pasta Salad ($2.75)</button>
+            <button class="meal-button" data-index="9">Fudge Chocolate Brownie ($2.25)9</button>
+        </aside>
+
+        <!-- Display of meal plan and cost -->
+        <main>
+            <h2>Your Meal Plan Cost is: <span id="total-cost">$0</span></h2>
+            <section>
+                <h2>Your Selected Meals:</h2>
+                <ul id="meal-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        
+        &#169; 2024 Dine on Campus. All Rights Reserved
     </footer>
 </body>
 </html>
