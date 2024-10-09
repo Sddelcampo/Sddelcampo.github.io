@@ -9,15 +9,15 @@ const playAgainButton = document.getElementById("play-again");
 // Data choices for computer plays
 const choices = {
     rock: {
-        image: "images/rock.PNG",
+        image: "images/rock.png",
         alt: "Rock"
     },
     paper: {
-        image: "images/paper.PNG",
+        image: "images/paper.png",
         alt: "Paper"
     },
     scissors: {
-        image: "images/scissors.PNG",
+        image: "images/scissors.png",
         alt: "Scissors"
     }
 };
@@ -151,7 +151,7 @@ function playAgain() {
         plays[i].style.border = "none";
     }
 
-    computerChoiceImage.src = "images/question-mark.PNG";
+    computerChoiceImage.src = "images/question-mark.png";
     computerChoiceImage.alt = "Computer's Turn";
     resultText.textContent = "";
     computerChoiceImage.style.border = "none";
