@@ -17,6 +17,11 @@ footer {
     flex-direction: column;
 }
 
+button {
+    background-color: #555;
+    color: white;
+}
+
 h1 {
     padding: 5%;
     font-size: 50px;
@@ -38,10 +43,10 @@ a {
     width: 25%;
 }
 
-.logo img {
+.logo img { 
+    padding-top: 10%;
+    padding-bottom: 10%; 
     width: 50%;
-    height: auto;
-    padding: 5%;
 }
 
 .title {
@@ -107,4 +112,75 @@ a {
 .item img {
     width: 100%;
     height: auto;
+}
+
+/* Purchase Section */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background-color: #777;
+    padding: 20px;
+}
+
+.cart-item img {
+    width: 250px;
+    height: auto;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.cart-item input[type=number] {
+    width: 50px;
+    padding: 5px;
+}
+
+.cart-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-total {
+    background-color: #777;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.product-details {
+    background-color: grey;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.product-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
