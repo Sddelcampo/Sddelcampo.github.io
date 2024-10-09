@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    flex: auto;
+    padding: 10px;
+    border-style: solid;
+    margin: 5px;
+}
+
+#game-user {
+    text-align: center;
+}
+
+#game-computer {
+    text-align: center;
+}
+
+#results {
+    text-align: center;
+}
