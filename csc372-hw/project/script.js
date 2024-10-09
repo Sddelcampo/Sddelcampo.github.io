@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 document.addEventListener("DOMContentLoaded", function () {
     /**
      * Updates the total price for a specific cart item and calculates the subtotal.
