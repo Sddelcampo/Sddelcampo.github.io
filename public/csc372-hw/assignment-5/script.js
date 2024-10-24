@@ -1,7 +1,7 @@
 "use strict";
 
 // Ensures that the default is my GitHub account
-const defaultUsername = 'Sddelcampo'; 
+const defaultUsername = 'Sddelcampo';
 
 // Event listener for search button
 document.querySelector("#search-btn").addEventListener("click", () => {
@@ -21,19 +21,15 @@ function fetchRepositories(username) {
   const repoContainer = document.querySelector("#repo-container");
   repoContainer.innerHTML = '';
 
-  // GitHub Token to avoid API rate limiting
-  const token = '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';
-
   // Fetches from the GitHub API based on the username that was inputted
   fetch(`https://api.github.com/users/${username}/repos`, {
     headers: {
-      'Authorization': `token ${token}`,
       'User-Agent': 'JavaScript-App'
     }
   })
     .then(response => {
       if (!response.ok) {
-        throw new Error('Failed to fetch repositories.');
+        throw new Error('Failed to fetch repositories. Check if the username is correct.');
       }
       return response.json();
     })
@@ -56,11 +52,15 @@ function fetchRepositories(username) {
         // Fetches number of commits for the repository
         fetch(repo.commits_url.replace("{/sha}", ""), {
           headers: {
-            'Authorization': `token ${token}`,
             'User-Agent': 'JavaScript-App'
           }
         })
-          .then(commitResponse => commitResponse.json())
+          .then(commitResponse => {
+            if (!commitResponse.ok) {
+              throw new Error('Failed to fetch commits.');
+            }
+            return commitResponse.json();
+          })
           .then(commits => {
             repoClone.querySelector(".repo-commits").textContent = `Commits: ${commits.length}`;
           });
@@ -68,11 +68,15 @@ function fetchRepositories(username) {
         // Fetch the languages that are used in the repository
         fetch(repo.languages_url, {
           headers: {
-            'Authorization': `token ${token}`,
             'User-Agent': 'JavaScript-App'
           }
         })
-          .then(langResponse => langResponse.json())
+          .then(langResponse => {
+            if (!langResponse.ok) {
+              throw new Error('Failed to fetch languages.');
+            }
+            return langResponse.json();
+          })
           .then(languages => {
             const langList = Object.keys(languages).join(', ');
             repoClone.querySelector(".repo-languages").textContent = `Languages: ${langList || 'None'}`;
