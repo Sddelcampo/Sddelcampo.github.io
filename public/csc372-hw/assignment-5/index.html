@@ -2,19 +2,51 @@
 
 <!--
   Name: Sebastian Del Campo
-  Date: 10.22.2024
+  Date: 10.23.2024
 
-  This is the index.html page for homework 5, which will...
+  This is the index.html page for homework 5, which will fetch GitHub Repositories from accounts
+  using the Github REST API via the script.js file. This is structured and formatted
+  with the index.html and styles.css files. Information includes: Repository name, description,
+  creation date, update date, commits made, languages used, watchers count, and a link to view the
+  repository on Github. You are also able to search other users' GitHub Repository via the search 
+  bar.
 -->
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5</title>
+    <title>Fetching GitHub Repositories</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+
+  <h1>Fetching GitHub Repositories</h1>
+
+  <div>
+    <input type="text" id="username-input" placeholder="Enter GitHub username">
+    <button id="search-btn">Search</button>
+    <br><br>
+  </div>
+
+  <div id="repo-container"></div>
+
+  <div class="repo-item-template" style="display:none;">
+    <h2 class="repo-name"></h2>
+    <p class="repo-description"></p>
+    <br>
+    <p class="repo-created"></p>
+    <p class="repo-updated"></p>
+    <br>
+    <p class="repo-commits"></p>
+    <br>
+    <p class="repo-languages"></p>
+    <br>
+    <p class="repo-watchers"></p>
+    <br>
+    <a class="repo-link" target="_blank">View Repository</a>
+  </div>
 </body>
 </html>
