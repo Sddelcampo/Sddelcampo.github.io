@@ -22,7 +22,7 @@ function fetchRepositories(username) {
   repoContainer.innerHTML = '';
 
   // GitHub Token to avoid API rate limiting
-  const token = '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';
+  const token = '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';
 
   // Fetches from the GitHub API based on the username that was inputted
   fetch(`https://api.github.com/users/${username}/repos`, {
