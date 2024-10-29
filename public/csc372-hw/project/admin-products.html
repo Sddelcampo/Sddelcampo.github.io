@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!--
+  Name: Sebastian Del Campo
+  Date: 10.16.2024
+
+  This is the admin-products.html page for milestone 3, which implements a datatable for tracking
+  datasets of games that gets uploaded via admin upload. Search feature is able to filter out based
+  on name or category. When clicking on add new product admin.js will prompt the user to enter data
+  and when submit is hit will add onto the table. 
+  
+  If you want to add an image, image must be in images folder and added via "images/your-image"
+
+  Due to no backend implementation yet, if refreshed the page will reset.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Products</title>
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/xyphernet_logo.png" alt="Xyphernet Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="admin-upload.html">Admin Upload</a></li>
+                <li><a href="admin-products.html">Admin Products</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Products</h1>
+        <input type="text" id="search" placeholder="Search...">
+        <button id="add-product">Add New Product</button>
+        <br><br>
+
+        <!-- Container for adding new products -->
+        <div id="add-product-form" style="display: none;">
+            <h2>Add New Product</h2>
+            <input type="text" id="new-product-name" placeholder="Name" required>
+            <input type="text" id="new-product-description" placeholder="Description" required>
+            <input type="text" id="new-product-category" placeholder="Category" required>
+            <input type="text" id="new-product-image" placeholder="Image Path" required>
+            <input type="number" id="new-product-price" placeholder="Price" required step="0.01">
+            <button id="submit-new-product">Submit</button>
+            <button id="cancel-new-product">Cancel</button>
+            <br><br>
+        </div>
+        
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

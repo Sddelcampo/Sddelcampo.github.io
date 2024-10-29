@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+.repo-item-template {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.repo-item-template h3 {
+    margin-top: 0;
+}
+
+.repo-item-template p {
+    margin: 5px 0;
+}
+
+.repo-item-template a {
+    text-decoration: none;
+    color: #333;
+}
+
+.repo-item-template a:hover {
+    color: #007bff;
+}
+
+#repo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#username-input {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+}

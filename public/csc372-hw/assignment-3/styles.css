@@ -1,0 +1,152 @@
+/* Reset and Generic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+/* header layout */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* ensures pictures don't go over 300px */
+img {
+    max-width: 300px; 
+    max-height: 300px; 
+    width: auto; 
+    height: auto; 
+}
+
+/* aside layout */
+aside {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* main layout */
+main {
+    flex: 5;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* section layout */
+section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* article layout */
+article {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1; 
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+/* footer layout */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* navigation buttoons */
+.nav-button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* meal planner buttons */
+.meal-button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.meal-button:hover {
+    background-color: #555;
+}
+
+/* container formation */
+#container {
+    display: flex;
+    flex: 1; 
+    margin: 0;
+}
+
+#container article {
+    justify-content: space-between;
+}
+
+/* articles section for main articles */
+#articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 1;
+}
+
+/* makes fun facts text align to the left rather than being centered*/
+#fun-facts {
+    text-align: left;
+}
+
+/* makes the overall design for meals that get selected when pressing the button */
+#meal-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#meal-list li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}

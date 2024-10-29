@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!--
+  Name: Sebastian Del Campo
+  Date: 10.16.2024
+
+  This is the product-edit.html page for milestone 3, which when clicked on the admin products page
+  will direct to a page which will allow you to edit the data. Implementation of submission of edit 
+  hasn't been added yet.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Edit Product</title>
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/xyphernet_logo.png" alt="Xyphernet Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="admin-upload.html">Admin Upload</a></li>
+                <li><a href="admin-products.html">Admin Products</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Edit Product</h1>
+        <form id="edit-form">
+            <input type="hidden" id="product-id" name="product-id">
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" name="name" required>
+
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" name="description" required></textarea>
+
+            <label for="product-category">Category:</label>
+            <input type="text" id="product-category" name="category" required>
+
+            <label for="product-image">Image Path:</label>
+            <input type="text" id="product-image" name="image" required>
+
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" name="price" step="0.01" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+* {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    flex: auto;
+    padding: 10px;
+    border-style: solid;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 15%;
+}
+
+button:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+button:active {
+    background-color: rgb(66, 66, 66);
+}
+
+#game-user, #game-computer, #results {
+    text-align: center;
+}
+
+#result-text{
+    font-size: 32px;
+}

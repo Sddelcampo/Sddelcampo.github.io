@@ -1,0 +1,186 @@
+body {
+    background-color: black;
+}
+
+header, main, footer {
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+
+main {
+    flex-wrap: wrap;
+}
+
+footer {
+    flex-direction: column;
+}
+
+button {
+    background-color: #555;
+    color: white;
+}
+
+h1 {
+    padding: 5%;
+    font-size: 50px;
+}
+
+a {
+    color: white;
+}
+
+/* Implementng Flexbox */
+.flexbox-item {
+    background-color: grey;
+    border: 1px solid black;
+
+}
+
+/* Logo and Title*/
+.logo {
+    width: 25%;
+}
+
+.logo img { 
+    padding-top: 10%;
+    padding-bottom: 10%; 
+    width: 50%;
+}
+
+.title {
+    width: 75%;
+}
+
+/* Body */
+.body-navigation-bar {
+    width: 25%;
+    
+}
+
+.body-navigation-bar input[type=text],
+.body-navigation-bar button[type=submit] {
+    padding: 5px;
+}
+
+.body-navigation-bar input[type=text] {
+    width: 50%;
+}
+
+.body-navigation-bar button[type=submit] {
+    width: 25%;
+}
+
+.body {
+    width: 74.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+}
+
+.intro-section, .news-section {
+    height: 50%;
+}
+
+/* Carousel Section */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-button {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.items {
+    display: flex;
+}
+
+.item {
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Purchase Section */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background-color: #777;
+    padding: 20px;
+}
+
+.cart-item img {
+    width: 250px;
+    height: auto;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.cart-item input[type=number] {
+    width: 50px;
+    padding: 5px;
+}
+
+.cart-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-total {
+    background-color: #777;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.product-details {
+    background-color: grey;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.product-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

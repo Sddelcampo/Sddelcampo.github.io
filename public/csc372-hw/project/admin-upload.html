@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!--
+  Name: Sebastian Del Campo
+  Date: 10.16.2024
+
+  This is the admin-upload.html page for milestone 3, this implements an upload button where you are
+  required to upload a .json, .csv, or .txt file to the prompt and upload it. While the upload
+  feature works, there isn't any backend implementation for upload yet, but it should process the data
+  and add it to the admin-products.html table.
+
+  Examples of how the file can be uploaded is also shown as an example
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Upload</title>
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/xyphernet_logo.png" alt="Xyphernet Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="admin-upload.html">Admin Upload</a></li>
+                <li><a href="admin-products.html">Admin Products</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Bulk Upload Products</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="file-input">Select a file to upload:</label>
+            <input type="file" id="file-input" name="file" accept=".json,.csv,.txt" required>
+            <button type="submit">Upload</button>
+        </form>
+        
+        <h2>Accepted File Formats</h2>
+        <p>You can upload files in the following formats:</p>
+        <ul>
+            <li>JSON (Note: any image type should work): <pre>[ 
+    {
+        "id": 1,
+        "name": "Product1",
+        "description": "Description1",
+        "category": "Category1",
+        "image": "path/image.png",
+        "price": 10.99
+    }
+]</pre>
+            </li>
+            <li>CSV and Text: <pre>"id,name,description,category,image,price"</pre></li>
+        </ul>
+    </main>
+</body>
+</html>
